@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/DXRichEditMVVM/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DXRichEditMVVM/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/DXRichEditMVVM/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/DXRichEditMVVM/MainWindow.xaml))
+* [Car.cs](./CS/DXRichEditMVVM/Model/Car.cs) (VB: [Car.vb](./VB/DXRichEditMVVM/Model/Car.vb))
+* [MyModel.cs](./CS/DXRichEditMVVM/Model/MyModel.cs) (VB: [MyModel.vb](./VB/DXRichEditMVVM/Model/MyModel.vb))
+* [ViewModel.cs](./CS/DXRichEditMVVM/ViewModel/ViewModel.cs) (VB: [ViewModel.vb](./VB/DXRichEditMVVM/ViewModel/ViewModel.vb))
+<!-- default file list end -->
 # How to bind the RichEditControl to a document source using the MVVM pattern
 
 
