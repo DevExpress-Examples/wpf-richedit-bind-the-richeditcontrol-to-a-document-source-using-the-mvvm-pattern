@@ -6,44 +6,44 @@ Imports System
 
 Namespace DXRichEditMVVM.Model
 
-    Partial Public Class Car
-        Public Property ID() As Integer
+	Partial Public Class Car
+		Public Property ID() As Integer
 
-        <StringLength(50)> _
-        Public Property Trademark() As String
+		<StringLength(50)>
+		Public Property Trademark() As String
 
-        <StringLength(50)> _
-        Public Property Model() As String
+		<StringLength(50)>
+		Public Property Model() As String
 
-        Public Property HP() As Short?
+		Public Property HP() As Short?
 
-        Public Property Liter() As Double?
+		Public Property Liter() As Double?
 
-        Public Property Cyl() As Byte?
+		Public Property Cyl() As Byte?
 
-        Public Property TransmissSpeedCount() As Byte?
+		Public Property TransmissSpeedCount() As Byte?
 
-        <StringLength(3)> _
-        Public Property TransmissAutomatic() As String
+		<StringLength(3)>
+		Public Property TransmissAutomatic() As String
 
-        Public Property MPG_City() As Byte?
+		Public Property MPG_City() As Byte?
 
-        Public Property MPG_Highway() As Byte?
+		Public Property MPG_Highway() As Byte?
 
-        <StringLength(7)> _
-        Public Property Category() As String
+		<StringLength(7)>
+		Public Property Category() As String
 
-        Public Property Description() As String
+		Public Property Description() As String
 
-        <StringLength(50)> _
-        Public Property Hyperlink() As String
+		<StringLength(50)>
+		Public Property Hyperlink() As String
 
-        <Column(TypeName := "image")> _
-        Public Property Picture() As Byte()
+		<Column(TypeName := "image")>
+		Public Property Picture() As Byte()
 
-        <Column(TypeName := "money")> _
-        Public Property Price() As Decimal?
+		<Column(TypeName := "money")>
+		Public Property Price() As Decimal?
 
-        Public Property RtfContent() As String
-    End Class
+		Public Property RtfContent() As String
+	End Class
 End Namespace
