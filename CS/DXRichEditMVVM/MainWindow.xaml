@@ -12,26 +12,27 @@
                  Title="MainWindow" 
                  Height="450" 
                  Width="800" 
-                 DataContext="{dxmvvm:ViewModelSource Type={x:Type ViewModels:ViewModel}}">    
+                 DataContext="{dxmvvm:ViewModelSource Type={x:Type ViewModels:ViewModel}}">
     <Grid>
         <!--region #richeditcontrol-->
-        <dxre:RichEditControl CommandBarStyle="Ribbon" 
-                              DocumentSource="{Binding DataBaseDocumentSource}" 
-                              ContentChanged="{DXEvent '@DataContext.UpdateRtfText(@Self.RtfText)'}">
-    <!--endregion #richeditcontrol-->
-    <dxre:RichEditControl.RibbonActions>
-        <dxb:RemoveAction ElementName="{x:Static dxre:DefaultBarItemNames.RibbonPage_MailMerge}" />
-        <!--region #SaveToTheDataBaseCommand-->
-        <dxb:InsertAction Index="2" ContainerName="{x:Static dxre:DefaultBarItemNames.RibbonGroup_File_Common}">
-            <dxb:BarButtonItem Content="Save to the Database" 
+        <dxre:RichEditControl  x:Name="richEditControl"
+            CommandBarStyle="Ribbon" 
+                              DocumentSource="{Binding DataBaseDocumentSource}"
+                              ModifiedChanged="{DXEvent '@DataContext.UpdateModified(@Self.Modified)'}">
+            <!--endregion #richeditcontrol-->
+            <dxre:RichEditControl.RibbonActions>
+                <dxb:RemoveAction ElementName="{x:Static dxre:DefaultBarItemNames.RibbonPage_MailMerge}" />
+                <!--region #SaveToTheDataBaseCommand-->
+                <dxb:InsertAction Index="2" ContainerName="{x:Static dxre:DefaultBarItemNames.RibbonGroup_File_Common}">
+                    <dxb:BarButtonItem Content="Save to the Database" 
                                LargeGlyph="{dx:DXImageOffice2013 Image=Save_32x32.png}" 
-                               Command="{DXCommand Execute='Save()', CanExecute='CanSave()'}">
-            </dxb:BarButtonItem>
-        </dxb:InsertAction>
-        <!--endregion #SaveToTheDataBaseCommand-->
-        <dxb:RemoveAction ElementName="{x:Static dxre:DefaultBarItemNames.RibbonItem_File_Common_Save}" />
-        <dxb:RemoveAction ElementName="{x:Static dxre:DefaultBarItemNames.RibbonItem_File_Common_SaveAs}" />
-    </dxre:RichEditControl.RibbonActions>
-    </dxre:RichEditControl>
+                               Command="{DXCommand Execute='Save(@parameter)', CanExecute='CanSave(@parameter)'}" CommandParameter="{DXBinding @e(richEditControl).RtfText}">
+                    </dxb:BarButtonItem>
+                </dxb:InsertAction>
+                <!--endregion #SaveToTheDataBaseCommand-->
+                <dxb:RemoveAction ElementName="{x:Static dxre:DefaultBarItemNames.RibbonItem_File_Common_Save}"/>
+                <dxb:RemoveAction ElementName="{x:Static dxre:DefaultBarItemNames.RibbonItem_File_Common_SaveAs}" />
+            </dxre:RichEditControl.RibbonActions>
+        </dxre:RichEditControl>
     </Grid>
 </dx:ThemedWindow>

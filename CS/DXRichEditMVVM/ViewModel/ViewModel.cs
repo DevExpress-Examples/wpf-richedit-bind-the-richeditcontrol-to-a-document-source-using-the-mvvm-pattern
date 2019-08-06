@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace DXRichEditMVVM.ViewModel
         Car car;
 
         public virtual object DataBaseDocumentSource { get; set; }
+
         public ViewModel()
         {
             //Load the database
@@ -28,29 +30,30 @@ namespace DXRichEditMVVM.ViewModel
         #endregion #ViewModel
 
         #region #UpdateRtfText
-        string currentText;
-        public void UpdateRtfText(string text)
+        bool modified;
+        public void UpdateModified(bool Modified)
         {
-            this.currentText = text;
+            this.modified = Modified;
         }
         #endregion #UpdateRtfText
 
         #region #SaveCommand
-        public void Save()
+        public void Save(string rtfText)
         {
             //Access the table entry by its model name
             Car newCar = carsModel.Cars.Where(d => d.Model == "SL500 Roadster").First();
 
             //Set its Rtf property to the current content
-            newCar.RtfContent = currentText;
+            newCar.RtfContent = rtfText;
             carsModel.SaveChanges();
 
             //Reset the current content
-            currentText = null;
+            modified = false;
+
         }
-        public bool CanSave()
+        public bool CanSave(string rtfText)
         {
-            return currentText != null;
+            return modified != false;
         }
         #endregion #SaveCommand
     }

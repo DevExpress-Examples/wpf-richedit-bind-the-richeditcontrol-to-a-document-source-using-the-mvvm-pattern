@@ -13,6 +13,8 @@ Namespace DXRichEditMVVM.ViewModel
         Private car As Car
 
         Public Overridable Property DataBaseDocumentSource() As Object
+        Private modified As Boolean
+
         Public Sub New()
             'Load the database
             carsModel = New MyModel()
@@ -22,30 +24,30 @@ Namespace DXRichEditMVVM.ViewModel
             car = carsModel.Cars.Local(0)
             DataBaseDocumentSource = car.RtfContent
         End Sub
-        #End Region ' #ViewModel
+#End Region ' #ViewModel
 
-        #Region "#UpdateRtfText"
-        Private currentText As String
-        Public Sub UpdateRtfText(ByVal text As String)
-            Me.currentText = text
+#Region "#UpdateModified"
+        Public Sub UpdateModified(ByVal Modified As Boolean)
+            Me.modified = Modified
         End Sub
-        #End Region ' #UpdateRtfText
+#End Region ' #UpdateModified
 
-        #Region "#SaveCommand"
-        Public Sub Save()
+#Region "#SaveCommand"
+        Public Sub Save(ByVal rtfText As String)
             'Access the table entry by its model name
             Dim newCar As Car = carsModel.Cars.Where(Function(d) d.Model = "SL500 Roadster").First()
 
             'Set its Rtf property to the current content
-            newCar.RtfContent = currentText
+            newCar.RtfContent = rtfText
+            
             carsModel.SaveChanges()
+			
+			modified = False
 
-            'Reset the current content
-            currentText = Nothing
         End Sub
-        Public Function CanSave() As Boolean
-            Return currentText IsNot Nothing
+        Public Function CanSave(ByVal rtfText As String) As Boolean
+            Return modified <> False
         End Function
-        #End Region ' #SaveCommand
+#End Region ' #SaveCommand
     End Class
 End Namespace
