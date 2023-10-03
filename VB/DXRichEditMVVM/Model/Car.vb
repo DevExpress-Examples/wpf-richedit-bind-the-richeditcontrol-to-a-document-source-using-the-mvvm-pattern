@@ -1,49 +1,47 @@
-﻿Imports System.Data.Entity.Spatial
-Imports System.ComponentModel.DataAnnotations.Schema
 Imports System.ComponentModel.DataAnnotations
-Imports System.Collections.Generic
-Imports System
+Imports System.ComponentModel.DataAnnotations.Schema
 
 Namespace DXRichEditMVVM.Model
 
-	Partial Public Class Car
-		Public Property ID() As Integer
+    Public Partial Class Car
 
-		<StringLength(50)>
-		Public Property Trademark() As String
+        Public Property ID As Integer
 
-		<StringLength(50)>
-		Public Property Model() As String
+        <StringLength(50)>
+        Public Property Trademark As String
 
-		Public Property HP() As Short?
+        <StringLength(50)>
+        Public Property Model As String
 
-		Public Property Liter() As Double?
+        Public Property HP As Short?
 
-		Public Property Cyl() As Byte?
+        Public Property Liter As Double?
 
-		Public Property TransmissSpeedCount() As Byte?
+        Public Property Cyl As Byte?
 
-		<StringLength(3)>
-		Public Property TransmissAutomatic() As String
+        Public Property TransmissSpeedCount As Byte?
 
-		Public Property MPG_City() As Byte?
+        <StringLength(3)>
+        Public Property TransmissAutomatic As String
 
-		Public Property MPG_Highway() As Byte?
+        Public Property MPG_City As Byte?
 
-		<StringLength(7)>
-		Public Property Category() As String
+        Public Property MPG_Highway As Byte?
 
-		Public Property Description() As String
+        <StringLength(7)>
+        Public Property Category As String
 
-		<StringLength(50)>
-		Public Property Hyperlink() As String
+        Public Property Description As String
 
-		<Column(TypeName := "image")>
-		Public Property Picture() As Byte()
+        <StringLength(50)>
+        Public Property Hyperlink As String
 
-		<Column(TypeName := "money")>
-		Public Property Price() As Decimal?
+        <Column(TypeName:="image")>
+        Public Property Picture As Byte()
 
-		Public Property RtfContent() As String
-	End Class
+        <Column(TypeName:="money")>
+        Public Property Price As Decimal?
+
+        Public Property RtfContent As String
+    End Class
 End Namespace
