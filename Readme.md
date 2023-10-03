@@ -3,20 +3,25 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T611845)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* [MainWindow.xaml](./CS/DXRichEditMVVM/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DXRichEditMVVM/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/DXRichEditMVVM/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/DXRichEditMVVM/MainWindow.xaml))
-* [Car.cs](./CS/DXRichEditMVVM/Model/Car.cs) (VB: [Car.vb](./VB/DXRichEditMVVM/Model/Car.vb))
-* [MyModel.cs](./CS/DXRichEditMVVM/Model/MyModel.cs) (VB: [MyModel.vb](./VB/DXRichEditMVVM/Model/MyModel.vb))
-* [ViewModel.cs](./CS/DXRichEditMVVM/ViewModel/ViewModel.cs) (VB: [ViewModel.vb](./VB/DXRichEditMVVM/ViewModel/ViewModel.vb))
-<!-- default file list end -->
-# How to bind the RichEditControl to a document source using the MVVM pattern
+# Rich Text Editor for WPF - How to Bind the RichEditControl to a Document Source using the MVVM Pattern
 
+The following code example shows how to use the MVVM pattern to bind RichEditControl to a data source.
 
-The following code example shows how to use the MVVM pattern bind RichEditControl to a data source. The model is represented by <strong>Car </strong>and<strong> CarModel </strong>classes, which are implemented using the Entity Framework Code First From the Database approach. The ViewModel provides the functionality to load the rtf content form the database and save back the changes made to the text.
+## Implementation Details
 
-<br/>
+The **Car** and **CarModel** classes represent the model. These classes are implemented using the Entity Framework Code First From the Database approach. The ViewModel provides the functionality to load the RTF content from the database and save the changes made to the text.
 
+## Files to Review
 
+| C# | Visual Basic |
+|---------|----------|
+| [MainWindow.xaml](./CS/DXRichEditMVVM/MainWindow.xaml) | [MainWindow.xaml](./VB/DXRichEditMVVM/MainWindow.xaml) |
+| [MainWindow.xaml.cs](./CS/DXRichEditMVVM/MainWindow.xaml.cs) | [MainWindow.xaml.vb](./VB/DXRichEditMVVM/MainWindow.xaml.vb) |
+| [Car.cs](./CS/DXRichEditMVVM/Model/Car.cs) | [Car.vb](./VB/DXRichEditMVVM/Model/Car.vb) |
+| [MyModel.cs](./CS/DXRichEditMVVM/Model/MyModel.cs) | [MyModel.vb](./VB/DXRichEditMVVM/Model/MyModel.vb) |
+| [ViewModel.cs](./CS/DXRichEditMVVM/ViewModel/ViewModel.cs) | [ViewModel.vb](./VB/DXRichEditMVVM/ViewModel/ViewModel.vb) |
+
+## Documentation
+
+* [Bind the Rich Text Editor to a Document Source using the MVVM pattern](https://docs.devexpress.com/WPF/118466/controls-and-libraries/rich-text-editor/getting-started/bind-the-rich-edit-control-to-a-document-source-using-the-mvvm-pattern)
