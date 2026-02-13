@@ -27,7 +27,7 @@ The **Car** and **CarModel** classes represent the model. These classes are imp
 
 * [Bind the Rich Text Editor to a Document Source using the MVVM pattern](https://docs.devexpress.com/WPF/118466/controls-and-libraries/rich-text-editor/getting-started/bind-the-rich-edit-control-to-a-document-source-using-the-mvvm-pattern)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-richedit-bind-the-richeditcontrol-to-a-document-source-using-the-mvvm-pattern&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-richedit-bind-the-richeditcontrol-to-a-document-source-using-the-mvvm-pattern&~~~was_helpful=no)
 
